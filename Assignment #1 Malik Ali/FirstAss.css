@@ -1,0 +1,204 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+
+    text-align: center;
+    padding: 20px;
+   
+}
+
+header h2{
+    color:  rgb(188, 211, 174) ;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  rgb(188, 211, 174) ;
+    padding: 10px;
+    position:sticky;
+    top: 0;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navigation a:hover {
+    background-color: #351717;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    width: 65%; 
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    justify-items: center; 
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+    border-radius: 8px; 
+}
+
+.divSecond {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.secondSection h2 {
+    margin-top: 20px;
+    border-radius: 8px; 
+}
+
+.right-side {
+    width: 30%; 
+    background-color: #eaeaea;
+    padding: 20px;
+    margin: 10px;
+}
+
+.thirdSection {
+    text-align: left;
+}
+
+.thirdSection h2 {
+    margin-top: 0;
+}
+
+.right-side {
+    width: 35%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #f4f4f4; 
+    border-radius: 8px; 
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 30px;
+    
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    align-items: center; 
+}
+
+.checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.form-submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 2s ease-out;
+}
+
+.form-submit:hover {
+    background-color: #45a049;
+    transform: scale(1.01);
+}
+
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    color: white;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left-side, .right-side {
+        width: 100%; 
+    }
+    .right-side {
+        width: 90%; 
+    }
+}

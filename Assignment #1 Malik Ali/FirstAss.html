@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+    <link rel="stylesheet" href="FirstAss.css">
+</head>
+
+<body>
+    <header style="background-color:#333;">
+        <h2>Welcome</h2>
+    </header>
+
+    <nav class="navigation">
+        <a>Home</a>
+        <a>About</a>
+        <a>Contact</a>
+    </nav>
+
+
+
+
+
+    <div class="main">
+        <div class="left-side">
+            <section class="firstSection">
+                <h2>Image Grid</h2>
+                <div class="grid-container">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 1">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 2">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 3">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 4">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 5">
+                    <img class="grid-item" src="Images/pexels-chevanon-1108099.jpg" alt="Image 6">
+                </div>
+            </section>
+
+            <section class="secondSection">
+                <h2>Txend</h2>
+                <li>Txend has helped companies grow and accelerate. Our growth hack is to make it simple and
+                    irreplaceable.</li>
+                <li>This lets your solutions work in the background while you focus on customer
+                    acquisition.</li>
+            </section>
+
+
+        </div>
+
+
+
+
+        <div class="right-side">
+            <section class="third-section">
+                <form action="" method="POST" class="form-container">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+
+                        <label for="age" class="form-label">Age Group:</label>
+                        <select id="age" name="age" class="form-input">
+                            <option value="under18">Under 18</option>
+                            <option value="18-24">18-24</option>
+                            <option value="25-34">25-34</option>
+                            <option value="35-44">35-44</option>
+                            <option value="45-54">45-54</option>
+                            <option value="55+">55+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Interests:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" id="music" name="interests" value="music">Music</label><br>
+                            <label><input type="checkbox" id="sports" name="interests" value="sports">Sports</label><br>
+                            <label><input type="checkbox" id="reading" name="interests" value="reading">Reading</label>
+                        </div>
+
+                        <input type="submit" value="Submit" class="form-submit">
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <p>© 2024 Txend</p>
+    </footer>
+</body>
+
+</html>
