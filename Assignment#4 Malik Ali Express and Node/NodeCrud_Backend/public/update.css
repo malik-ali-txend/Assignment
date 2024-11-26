@@ -1,0 +1,110 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for form */
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for container */
+.container:hover {
+    transform: translateY(-10px);
+}
+
+/* Title styling */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input field styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields */
+input:focus {
+    border-color: #0072ff;
+    outline: none;
+    background-color: #eaf2ff;
+}
+
+/* Button styling */
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #0072ff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px);
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    input {
+        font-size: 14px;
+    }
+    .submit-btn {
+        font-size: 16px;
+    }
+}

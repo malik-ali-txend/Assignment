@@ -1,0 +1,77 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f9; /* Light background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the delete confirmation */
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Title styling */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    color: #555;
+    margin: 8px 0;
+}
+
+/* Button styling */
+.delete-btn {
+    padding: 12px 25px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+.delete-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+}
+
+/* Confirmation message */
+.confirmation-message {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #f2a654;
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .delete-btn {
+        font-size: 16px;
+    }
+}

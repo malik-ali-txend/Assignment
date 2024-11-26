@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/update.css">
+    <title>Update Resource</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Resource</h1>
+        <form action="/update/<%= resource.id %>" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" value="<%= resource.name %>" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" name="price" value="<%= resource.price %>" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" name="category" value="<%= resource.category %>" required>
+            </div>
+            <button type="submit" class="submit-btn">Update Resource</button>
+        </form>
+    </div>
+</body>
+</html>
