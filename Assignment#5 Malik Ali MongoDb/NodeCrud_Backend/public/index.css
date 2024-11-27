@@ -1,0 +1,180 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Add Resource Button */
+.add-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.add-button:hover {
+    background-color: #5a4bdb;
+    transform: scale(1.05);
+}
+
+/* Resource List and Box Styling */
+.resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.resource-box {
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.resource-box p {
+    margin: 12px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.resource-box strong {
+    color: #6c63ff;
+    font-weight: 600;
+}
+
+/* Action Buttons Styling */
+.actions {
+    margin-top: 20px;
+}
+
+.update-btn, 
+.delete-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+.update-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Form Input Styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 14px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a4bdb;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .resource-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-box {
+        width: 90%;
+    }
+
+    .add-button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}

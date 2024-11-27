@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/delete.css">
+    <title>Delete Resource</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you sure you want to delete the resource?</h1>
+        <p><strong>Name:</strong> <%= resource.name %></p>
+        <p><strong>Price:</strong> <%= resource.price %></p>
+        <p><strong>Category:</strong> <%= resource.category %></p>
+        <form action="/delete/<%= resource.id %>" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
