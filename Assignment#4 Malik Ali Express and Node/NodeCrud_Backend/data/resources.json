@@ -1,20 +1,26 @@
 [
   {
-    "name": "Pizza",
-    "price": "1500",
-    "category": "Food",
-    "id": 1
-  },
-  {
     "name": "Jeans",
     "price": "1000",
     "category": "Clothing",
+    "id": 1
+  },
+  {
+    "name": "Jabbar",
+    "price": "100",
+    "category": "Human",
     "id": 2
   },
   {
-    "name": "Iron",
-    "price": "5000",
+    "name": "Laptop",
+    "price": "70000",
     "category": "Electronics",
     "id": 3
+  },
+  {
+    "name": "shwarma",
+    "price": "200",
+    "category": "Fast Food",
+    "id": 4
   }
 ]
