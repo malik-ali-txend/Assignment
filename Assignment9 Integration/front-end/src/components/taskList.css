@@ -1,0 +1,64 @@
+/* TaskList component */
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li p {
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #6d0014;
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.delete {
+    background-color: #dc3545;
+  }
+  
+  @media (max-width: 768px) {
+    .App {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      margin: 10px;
+      padding: 8px;
+    }
+  }
+  

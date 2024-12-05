@@ -1,0 +1,49 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #720707;
+    outline: none;
+  }
+  
+  button {
+    background-color: #be1e1e;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3a0000;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    color: rgb(86, 46, 46);
+    font-size: 0.875rem;
+    margin-top: -10px;
+  }
+  
