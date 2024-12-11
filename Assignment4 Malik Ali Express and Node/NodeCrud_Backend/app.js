@@ -13,10 +13,8 @@ app.use(logMiddleware);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Static files (CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware for parsing POST request data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -6,22 +6,13 @@ const getAllResources = async (req, res) => {
     const resources = await Product.find();
     res.render("index", { resources });
   } catch (error) {
-    res.status(500).send("Error fetching resources: " + error.message);
+    res.status(500).send("Error loading resources: " + error.message);
   }
 };
 
-// Get a single resource
-const getResource = async (req, res) => {
-  try {
-    const resourceId = req.params.id;
-    const resource = await Product.findById(resourceId);
-    if (!resource) {
-      return res.status(404).send("Resource not found");
-    }
-    res.render("update", { resource });
-  } catch (error) {
-    res.status(500).send("Error fetching resource: " + error.message);
-  }
+// Render the create resource form
+const renderCreateForm = (req, res) => {
+  res.render("create");
 };
 
 // Create a new resource
@@ -35,30 +26,53 @@ const createResource = async (req, res) => {
   }
 };
 
-// Update an existing resource
+// Render the update form for a specific resource
+const renderUpdateForm = async (req, res) => {
+  try {
+    const resource = await Product.findById(req.params.id);
+    if (!resource) {
+      return res.status(404).send("Resource not found");
+    }
+    res.render("update", { resource });
+  } catch (error) {
+    res.status(500).send("Error fetching resource: " + error.message);
+  }
+};
+
+// Update a resource
 const updateResource = async (req, res) => {
   try {
-    const resourceId = req.params.id;
-    const updatedResource = await Product.findByIdAndUpdate(resourceId, req.body, {
-      new: true,
-      runValidators: true,
-    });
-
+    const updatedResource = await Product.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
     if (!updatedResource) {
       return res.status(404).send("Resource not found");
     }
-
     res.redirect("/");
   } catch (error) {
     res.status(500).send("Error updating resource: " + error.message);
   }
 };
 
+// Render the delete confirmation form
+const renderDeleteForm = async (req, res) => {
+  try {
+    const resource = await Product.findById(req.params.id);
+    if (!resource) {
+      return res.status(404).send("Resource not found");
+    }
+    res.render("delete", { resource });
+  } catch (error) {
+    res.status(500).send("Error fetching resource: " + error.message);
+  }
+};
+
 // Delete a resource
 const deleteResource = async (req, res) => {
   try {
-    const resourceId = req.params.id;
-    const deletedResource = await Product.findByIdAndDelete(resourceId);
+    const deletedResource = await Product.findByIdAndDelete(req.params.id);
     if (!deletedResource) {
       return res.status(404).send("Resource not found");
     }
@@ -70,8 +84,10 @@ const deleteResource = async (req, res) => {
 
 module.exports = {
   getAllResources,
-  getResource,
+  renderCreateForm,
   createResource,
+  renderUpdateForm,
   updateResource,
+  renderDeleteForm,
   deleteResource,
 };
