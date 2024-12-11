@@ -1,20 +1,14 @@
 [
   {
-    "name": "Jeans",
-    "price": "1000",
-    "category": "Clothing",
-    "id": 1
-  },
-  {
-    "name": "shwarma",
-    "price": "200",
-    "category": "Fast Food",
-    "id": 4
-  },
-  {
     "name": "lakjslkas",
     "price": "13190",
     "category": "2222",
     "id": 5
+  },
+  {
+    "name": "jabbar",
+    "price": "100",
+    "category": "human'",
+    "id": 2
   }
 ]
