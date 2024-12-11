@@ -1,16 +1,16 @@
-// routes/resourceRoutes.js
 const express = require('express');
 const router = express.Router();
-const resourceController = require('../controllers/resourceController');  // Importing the controller
+const resourceController = require('../controllers/resourceController');
 
-// Define routes for the resources
-router.get('/', resourceController.getAllResources);  // Display all resources
-router.get('/create', (req, res) => res.render('create'));  // Show the create form
-router.get('/update/:id', resourceController.getResource);  // Show the update form
-router.get('/delete/:id', resourceController.getResource);  // Show the delete form
+// Routes for handling resources
+router.get('/', resourceController.getAllResources);
+router.get('/create', (req, res) => res.render('create'));
+router.get('/update/:id', resourceController.getResource);
+router.get('/delete/:id', resourceController.getResource);
 
-router.post('/create', resourceController.createResource);  // Create a new resource
-router.post('/update/:id', resourceController.updateResource);  // Update an existing resource
-router.post('/delete/:id', resourceController.deleteResource);  // Delete a resource
+// POST routes for handling resource creation, updating, and deletion
+router.post('/create', resourceController.createResource);
+router.post('/update/:id', resourceController.updateResource);
+router.post('/delete/:id', resourceController.deleteResource);
 
 module.exports = router;
