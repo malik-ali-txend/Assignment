@@ -18,7 +18,10 @@
                     <p><strong>Category:</strong> <%= resource.category %></p>
                     <div class="actions">
                         <a href="/update/<%= resource.id %>" class="update-btn">Update</a>
-                        <a href="/delete/<%= resource.id %>" class="delete-btn">Delete</a>
+                        <!-- Delete Form -->
+                        <form action="/delete/<%= resource.id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="delete-btn">Delete</button>
+                        </form>
                     </div>
                 </div>
             <% }) %>
