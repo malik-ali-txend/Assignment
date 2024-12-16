@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #393131;
+  }
+  
+  .crud-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #1b0532;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Title */
+  .crud-container h1 {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Input fields and button container */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #da8f8f;
+    border-radius: 25px;
+  }
+  
+  .input-group button {
+    background-color: #00ff88;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .input-group button:hover {
+    background-color: #448247;
+  }
+  
+  /* List styling */
+  .crud-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .crud-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #472c5f;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .crud-list li span {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  /* Buttons */
+  .crud-list button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .crud-list button.edit {
+    background-color: #499cdf;
+    color: white;
+  }
+  
+  .crud-list button.edit:hover {
+    background-color: #0081f2;
+  }
+  
+  .crud-list button.delete {
+    background-color: #f6655b;
+    color: white;
+  }
+  
+  .crud-list button.delete:hover {
+    background-color: #ff0400;
+  }
+  
